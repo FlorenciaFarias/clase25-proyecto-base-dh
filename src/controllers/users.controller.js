@@ -7,12 +7,10 @@ const usersController = {
       styles:['forms']
     });
   },
-/*Procesemos el formulario
- método: function(req, res){
+ process: function(req, res){
 
-  //Tu código
-
-},*/
+  res.send('Validacion on');
+},
 
   login: function(req,res){
     return res.render('users/login',{
