@@ -30,6 +30,18 @@ const usersController = {
     return res.render('users/login',{
       styles:['forms']
     });
+  },
+  access: function(req,res){
+    let validaciones = validationResult(req)
+    let {errors} = validaciones
+    if(errors && errors.length > 0){
+      return res.render('users/login',{
+        styles:['forms'],
+        oldData: req.body,
+        errors: validaciones.mapped()
+      });
+    }
+    return res.send('Ingresando...')
   }
 }
   module.exports = usersController;

@@ -1,5 +1,6 @@
 const {readFileSync, writeFileSync}= require('fs');
 const {resolve}= require('path');
+const {hashSync} = require('bcryptjs')
 const model = {
   index:function(){
     let file = resolve(__dirname,'../data','users.json');
@@ -22,8 +23,9 @@ const model = {
         nombre: data.nombre,
         apellido: data.apellido,
         email: data.email,
-        password: data.password,
-        image: data.image
+        password: hashSync(data.password,10),
+        image: data.image,
+        isAdmin: data.email.includes('@dh.com')
     })
   },
   write: function(data) {

@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": 2,
+    "nombre": "Edu",
+    "apellido": "Virgilio",
+    "email": "evirgilio@dh.com",
+    "password": "$2a$10$iMxCnZyaCEX9EFLONed6feQg4OAfbdbr0AeZeZQZmYm.v9V4OdcYy",
+    "image": "avatar-1657665878380_img.png",
+    "isAdmin": true
+  },
+  {
+    "id": 3,
+    "nombre": "Edu",
+    "apellido": "Virgilio",
+    "email": "edu@gmail.com",
+    "password": "$2a$10$2VvK/2QvhWmjIt13g4epyOPsjhIjOz84zlJf8fEF8E.v5PSBE1v7C",
+    "image": "avatar-1657666055689_img.png",
+    "isAdmin": false
+  }
+]
