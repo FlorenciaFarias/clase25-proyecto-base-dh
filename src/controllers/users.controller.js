@@ -41,7 +41,11 @@ const usersController = {
         errors: validaciones.mapped()
       });
     }
-    return res.send('Ingresando...')
+
+    let users = index();
+    let user = users.find(u => u.email === req.body.email)
+    req.session.user = user
+    return res.redirect('/')
   }
 }
   module.exports = usersController;

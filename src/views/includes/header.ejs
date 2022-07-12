@@ -1,7 +1,11 @@
 <header>
     <nav id="nav-home-a">
         <a href="/">Inicio</a>
-        <a href="/users/register">Registarme</a>
-        <a href="/users/login">Iniciar sesión</a>
+        <% if (!user) { %>
+            <a href="/users/register">Registarme</a>
+            <a href="/users/login">Iniciar sesión</a>
+        <% } else { %>
+            <a href="/users/logout">Salir <%= user.nombre %> </a>
+        <% } %>
     </nav>
 </header>
