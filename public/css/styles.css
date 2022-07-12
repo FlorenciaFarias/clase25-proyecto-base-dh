@@ -16,13 +16,16 @@ header{
     margin-bottom: 0.8rem;
 }
 #nav-home-a{
+    flex-grow: 1;
     flex-wrap: wrap;
     align-content: space-around;
-    flex-basis: 25vw;
     display: flex;
     justify-content: space-around;
+    gap: 1rem;
 }
 #nav-home-a a{
+    flex-grow: 1;
     color: beige;
     text-decoration: none;
+    text-align: center;
 }
