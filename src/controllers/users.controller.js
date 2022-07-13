@@ -46,6 +46,10 @@ const usersController = {
     let user = users.find(u => u.email === req.body.email)
     req.session.user = user
     return res.redirect('/')
+  },
+  logout: function (req,res) {
+    delete req.session.user 
+    return res.redirect('/')
   }
 }
   module.exports = usersController;

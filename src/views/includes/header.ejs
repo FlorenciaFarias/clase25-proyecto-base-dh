@@ -4,7 +4,12 @@
         <% if (!user) { %>
             <a href="/users/register">Registarme</a>
             <a href="/users/login">Iniciar sesión</a>
+        <% } else if (user && user.isAdmin) { %>
+            <a href="/products/create">Crear Producto</a>
+            <a href="/users/logout">Salir <%= user.nombre %> </a>
         <% } else { %>
+            <a href="/cart">Carrito</a>
+            <a href="/users/profile">Perfil</a>
             <a href="/users/logout">Salir <%= user.nombre %> </a>
         <% } %>
     </nav>
